@@ -45,7 +45,7 @@ const Navbar = () => {
   ];
 
   return (
-    <div className="fixed flex items-center justify-between w-11/12 p-2 px-5 -translate-x-1/2 rounded-full top-10 left-1/2 bg-navbar">
+    <div className="fixed z-50 flex items-center justify-between w-11/12 p-2 px-5 -translate-x-1/2 rounded-full top-10 left-1/2 bg-navbar">
       {/* Logo */}
       <img src="/logo.png" alt="" className="object-contain" />
 
