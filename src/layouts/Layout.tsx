@@ -1,16 +1,8 @@
 import { Footer, Navbar } from "../components";
-import {
-  Outlet,
-  useLocation,
-  useNavigate,
-  useNavigation,
-  useParams,
-} from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 
 const Layout = () => {
   const { pathname } = useLocation();
-
-  console.log("pathname :", pathname);
 
   const contactBG =
     pathname === "/contact-us" && "bg-contact bg-cover bg-norepeat";
