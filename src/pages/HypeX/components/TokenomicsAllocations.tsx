@@ -8,7 +8,13 @@ import {
   Tooltip,
 } from "recharts";
 
-const data = [
+interface DataEntry {
+  name: string;
+  value: number;
+  color: string;
+}
+
+const data: DataEntry[] = [
   { name: "Airdrops", value: 1, color: "#8a56d3" },
   { name: "Early Backers/Angels", value: 2, color: "#9c27b0" },
   { name: "Seed", value: 3, color: "#ab47bc" },
@@ -28,14 +34,23 @@ const data = [
 
 const RADIAN = Math.PI / 180;
 
-const RenderCustomizedLabel = ({
+interface RenderCustomizedLabelProps {
+  cx: number;
+  cy: number;
+  midAngle: number;
+  innerRadius: number;
+  outerRadius: number;
+  percent: number;
+  index: number;
+}
+
+const RenderCustomizedLabel: React.FC<RenderCustomizedLabelProps> = ({
   cx,
   cy,
   midAngle,
   innerRadius,
   outerRadius,
   percent,
-  index,
 }) => {
   const radius = innerRadius + (outerRadius - innerRadius) * 0.5;
   const x = cx + radius * Math.cos(-midAngle * RADIAN);
@@ -54,7 +69,11 @@ const RenderCustomizedLabel = ({
   );
 };
 
-const CustomLegend = ({ payload }) => {
+interface CustomLegendProps {
+  payload: { color: string; value: number }[];
+}
+
+const CustomLegend: React.FC<CustomLegendProps> = ({ payload }) => {
   return (
     <ul className="flex flex-col gap-2 p-0 m-0 text-sm text-white list-none">
       {payload.map((entry, index) => (
@@ -70,7 +89,7 @@ const CustomLegend = ({ payload }) => {
   );
 };
 
-const DonutChart = () => {
+const DonutChart: React.FC = () => {
   return (
     <div
       className="chart-container"
@@ -106,7 +125,10 @@ const DonutChart = () => {
             layout="vertical"
             iconSize={30}
             radius={10}
-            content={<CustomLegend />}
+            content={({ payload }) => {
+              console.log("payload :", payload);
+              return <CustomLegend payload={payload as DataEntry[]} />;
+            }}
           />
         </PieChart>
       </ResponsiveContainer>
@@ -114,7 +136,7 @@ const DonutChart = () => {
   );
 };
 
-const TokenomicsAllocations = () => {
+const TokenomicsAllocations: React.FC = () => {
   return (
     <div>
       <h2 className="mb-0 text-xl font-bold text-center text-white md:text-6xl">

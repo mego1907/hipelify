@@ -1,5 +1,3 @@
-import React from "react";
-
 const Publications = () => {
   return (
     <div className="flex flex-col mt-10 md:mt-32 md:mb-20 md:gap-20">
