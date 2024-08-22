@@ -1,8 +1,7 @@
 import { CustomButton, ImageAndDescSection } from "../../components";
 import TeamMembers from "../../components/TeamMembers";
-import { Layout } from "../../layouts";
 import Header from "./components/Header";
-import RoadMap from "./components/RoadMap";
+import RoadMap from "./components/Roadmap";
 import TokenomicsAllocations from "./components/TokenomicsAllocations";
 import TokenomicsFundraising from "./components/TokenomicsFundraising";
 

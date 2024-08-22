@@ -1,5 +1,4 @@
 import { ImageAndDescSection } from "../../components";
-import Header from "./components/Header";
 
 const Home = () => {
   return (

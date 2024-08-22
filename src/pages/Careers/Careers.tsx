@@ -1,5 +1,3 @@
-import { PageTitle } from "../../components";
-
 const Careers = () => {
   return (
     <div className="flex flex-col">
