@@ -1,5 +1,3 @@
-import React from "react";
-
 const TokenomicsFundraising = () => {
   const tableCols = [
     "Token Sales",
@@ -54,7 +52,7 @@ const TokenomicsFundraising = () => {
                   </tr>
                 </thead>
                 <tbody className="bg-transparent ">
-                  {tableData.map((item, index) => (
+                  {tableData.map((item) => (
                     <tr>
                       {item.map((cell, index) => (
                         <td

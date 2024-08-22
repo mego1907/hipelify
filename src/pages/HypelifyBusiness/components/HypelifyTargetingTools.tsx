@@ -1,5 +1,3 @@
-import React from "react";
-
 const HypelifyTargetingTools = () => {
   return (
     <div className="relative grid md:grid-cols-2 bg-HypelifyTargetingTools md:h-[30rem] w-full md:p-0 p-5 bg-cover bg-no-repeat rounded-[2rem] md:my-20">

@@ -1,5 +1,3 @@
-import React from "react";
-
 const CampaignJourney = () => {
   return (
     <div className="flex flex-col py-10 md:py-20">

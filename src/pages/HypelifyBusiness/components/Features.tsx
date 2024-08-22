@@ -1,5 +1,3 @@
-import React from "react";
-
 const Features = () => {
   return (
     <div className="flex flex-col mb-10 md:mt-0 md:mb-0">

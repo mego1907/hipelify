@@ -1,4 +1,3 @@
-import React from "react";
 import TeamMembers from "../../components/TeamMembers";
 import { CustomButton, ImageAndDescSection, PageTitle } from "../../components";
 

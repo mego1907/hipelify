@@ -1,4 +1,3 @@
-import React from "react";
 import { PageTitle } from "../../components";
 import Form from "./components/Form";
 

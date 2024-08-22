@@ -1,4 +1,3 @@
-import React from "react";
 import { CustomButton } from "../../../components";
 
 const RoadMap = () => {
@@ -71,11 +70,18 @@ const RoadMap = () => {
       <h2 className="md:text-[3.8rem] text-xl font-extrabold">Roadmap</h2>
 
       <div className="grid w-full grid-cols-1 md:grid-cols-3 gap-7 md:gap-y-24">
-        {data.map((item: any) => (
-          <div className="flex justify-start">
-            <RoadmapCard {...item} />
-          </div>
-        ))}
+        {data.map(
+          (item: {
+            subTitle: string;
+            title: string;
+            list: string[];
+            q: string;
+          }) => (
+            <div className="flex justify-start">
+              <RoadmapCard {...item} />
+            </div>
+          )
+        )}
 
         <div className="relative flex flex-col justify-center items-start p-6 text-white border border-transparent border-white bg-clip-border rounded-xl md:w-[23rem] w-full">
           <h3 className="md:text-[2rem] font-bold mb-5 leading-8">
@@ -98,7 +104,17 @@ const RoadMap = () => {
   );
 };
 
-const RoadmapCard = ({ subTitle, title, list, q }) => {
+const RoadmapCard = ({
+  subTitle,
+  title,
+  list,
+  q,
+}: {
+  subTitle: string;
+  title: string;
+  list: string[];
+  q: string;
+}) => {
   return (
     <div className="relative flex flex-col p-6 text-white border border-transparent border-white bg-clip-border rounded-xl w-[23rem]">
       <h6 className="mb-6 text-base font-bold uppercase">{subTitle}</h6>

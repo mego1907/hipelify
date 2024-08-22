@@ -1,5 +1,3 @@
-import React from "react";
-
 type ImageAndDescSectionProps = {
   right: React.ReactNode;
   left: React.ReactNode;

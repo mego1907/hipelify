@@ -1,5 +1,3 @@
-import React from "react";
-
 const HypelifyClientsAndPartners = () => {
   return (
     <div className="py-10 md:py-20">

@@ -1,5 +1,3 @@
-import React from "react";
-
 const TokenomicsFundraising = () => {
   const tableCols = [
     "Token Sales",

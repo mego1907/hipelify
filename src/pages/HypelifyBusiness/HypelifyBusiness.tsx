@@ -1,9 +1,7 @@
-import React from "react";
-import Flowchart from "./components/Flowchart";
 import CampaignJourney from "./components/CampaignJourney";
 import HypelifyTargetingTools from "./components/HypelifyTargetingTools";
 import Features from "./components/Features";
-import { CustomButton, PageTitle } from "../../components";
+import { CustomButton } from "../../components";
 import HypelifyClientsAndPartners from "./components/HypelifyClientsAndPartners";
 
 const HypelifyBusiness = () => {
